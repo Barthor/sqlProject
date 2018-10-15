@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="699.0" prefWidth="635.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project3.FXMLDocumentController">
+    <children>
+        <Button fx:id="clearSqlButton" layoutX="324.0" layoutY="236.0" onAction="#handleClearSqlButton" text="Clear SQL Command" />
+      <Label layoutX="37.0" layoutY="65.0" prefHeight="25.0" prefWidth="74.0" text="JDBC Driver">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="95.0" prefHeight="25.0" prefWidth="85.0" text="Database URL">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="usernameField" layoutX="127.0" layoutY="125.0" />
+      <Label layoutX="37.0" layoutY="125.0" prefHeight="25.0" prefWidth="74.0" text="Username">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="passwordField" layoutX="127.0" layoutY="155.0" />
+      <Label layoutX="37.0" layoutY="155.0" prefHeight="25.0" prefWidth="74.0" text="Password">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+        <ComboBox id="drivers" fx:id="drivers" layoutX="128.0" layoutY="64.0" prefHeight="27.0" prefWidth="149.0" promptText="Select Driver">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Item 1" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+        <ComboBox id="URLS" fx:id="URLS" layoutX="128.0" layoutY="94.0" prefHeight="27.0" prefWidth="149.0" promptText="Select DB URL">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                <String fx:value="Item 1" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+      <TextArea id="userSqlCommandText" fx:id="userSqlCommandText" layoutX="324.0" layoutY="68.0" prefHeight="133.0" prefWidth="280.0" />
+      <Label layoutX="37.0" layoutY="37.0" text="Enter Database Information">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="324.0" layoutY="37.0" text="Enter an SQL Command">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="executeSqlButton" layoutX="464.0" layoutY="236.0" onAction="#handleExecuteSqlButton" text="Execute SQL Command" />
+      <Button fx:id="connectDbButton" layoutX="189.0" layoutY="236.0" onAction="#handleConnectDbButton" text="Connect to Database" />
+      <Label fx:id="dbStatus" layoutX="36.0" layoutY="240.0" text="Database Not Connected" />
+        <TableView fx:id="tableView" layoutX="8.0" layoutY="287.0" prefHeight="361.0" prefWidth="615.0">
+                <columns>
+                </columns>
+        </TableView>
+      <Button fx:id="clearResultsButton" layoutX="37.0" layoutY="654.0" mnemonicParsing="false" onAction="#handleClearResultsButton" text="Clear Results Window" />
+      <Label layoutX="11.0" layoutY="260.0" prefHeight="21.0" prefWidth="216.0" text="SQL Execution Results Window">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>
